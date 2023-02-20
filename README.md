@@ -9,4 +9,5 @@ Eventbrite-like website project using Ruby on Rails, PostgreSQL database with Ac
 ## Seed file
 
 Create, migrate and fill up the database using this command:  
+
 `$ rails db:create db:migrate db:seed`  
