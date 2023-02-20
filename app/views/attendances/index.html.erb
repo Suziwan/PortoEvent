@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <br>
+  <h4>List of all attendances</h4><br>
+  <div class="list-group">
+    <% @attendances.each do |attendance| %>
+      <a href="/users/<%= attendance.id %>/" class="list-group-item list-group-item-action">
+        Attendance nº <%= attendance.id %>: <%= attendance.stripe_customer_id %><br>
+      </a>
+    <% end %>
+  </div>
+</div>
