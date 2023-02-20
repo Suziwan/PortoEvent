@@ -10,7 +10,64 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+<style>
+.navbar{
+  padding: 10px;
+}
+
+.jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1513735492246-483525079686?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.container-fluid { 
+  padding-left: 30px; 
+  padding-right: 30px; 
+} 
+
+.my-form {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.my-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.card{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+</style>
+
   <body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark justify-content-between">
+    <a class="navbar-brand" href="/">PortoEvent</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/events">Events</a>
+        </li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <a class="btn btn-light" href="<%= root_path %>" role="button">Login</a>
+      <a class="btn btn-light" href="<%= root_path %>" role="button">Create account</a>
+    </form>
+  </nav>
     <%= yield %>
   </body>
 </html>

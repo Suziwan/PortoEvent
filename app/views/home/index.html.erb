@@ -1,11 +1,24 @@
+<div class="jumbotron">
+  <div class="container">
+    <br><br><br>
+    <h3 class="display-4 text-dark"><strong>Welcome to PortoEvent!</strong></h3>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <a class="btn btn-dark btn-outline-light btn-lg" href="<%= events_path %>" role="button">Find your next event</a>
+    <br><br><br><br><br>
+  </div>
+</div>
 <div class="container-fluid">
   <br>
-  <h4>Welcome to PortoEvent!</h4>
+  <h4>Coming up: </h4><br>
+  <div class="list-group">
+    <% @events.each do |event| %>
+      <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
+        <%= event.title %><br>
+        <strong>Date: </strong><%= event.start_date.strftime('%A, %B %dth %Y') %><br>
+        <strong>Price: </strong><%= event.price %> €<br>
+      </a>
+    <% end %>
+  </div>
   <br>
-  <%= link_to "View all users", users_path %>
-  <br><br>
-  <%= link_to "View all events", events_path %>
-  <br><br>
-  <%= link_to "View all attendances", attendances_path %>
-  <br><br>
 </div>
