@@ -1,24 +1,12 @@
-# README
+# PortoEvent
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eventbrite-like website project using Ruby on Rails, PostgreSQL database with Active Record, and publishing on Heroku or Fly.io
 
-Things you may want to cover:
+## Diagram
 
-* Ruby version
+<img src=/Diagram_PortoEvent.png width="600">
 
-* System dependencies
+## Seed file
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Create, migrate and fill up the database using this command:  
+`$ rails db:create db:migrate db:seed`  
