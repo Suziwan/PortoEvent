@@ -1,11 +1,14 @@
 <div class="container-fluid">
   <br>
-  <h4>List of all events</h4><br>
-  <div class="list-group">
-    <% @events.each do |event| %>
-      <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
-        Event nº <%= event.id %>: <%= event.title %><br>
-      </a>
-    <% end %>
+  <h4><%= @event.title %></h4><br>
+  <div class="my-box">
+    <p><strong>Date: </strong><%= @event.start_date %><br><br>
+      <strong>Duration: </strong><%= @event.duration %> minutes<br><br>
+      <strong>Title: </strong><%= @event.title %><br>
+      <strong>Description: </strong><%= @event.description %><br><br>
+      <strong>Price: </strong><%= @event.price %> €<br>
+      <strong>Location: </strong><%= @event.location %><br><br>
+      <a class="btn btn-primary btn-lg" href="/events/<%= params[:id] %>/edit" role="button">Edit this event</a>
+    </p>
   </div>
-</div>
+  <br>

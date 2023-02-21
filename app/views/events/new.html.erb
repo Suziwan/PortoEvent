@@ -1,13 +1,42 @@
 <div class="container-fluid">
   <br>
-  <h4>Create a new event </h4><br>
-  <div class="list-group">
-  <p>For now, here is the list:<br><br>
-    <% @events.each do |event| %>
-      <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
-        Event nº <%= event.id %>: <%= event.title %><br>
-      </a>
+  <h4>Create a new event</h4><br>
+  <div class="my-form">
+    <%= form_with model: @event do |f| %>
+      <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+      <div class="form-group">
+        <label>Title:</label>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Description:</label>
+        <%= f.text_field :start_date, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Start date (format: YYYY-MM-DD HH:MM:SS UTC):</label>
+        <%= f.text_field :start_date, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Duration (in minutes):</label>
+        <%= f.text_field :duration, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Location:</label>
+        <%= f.text_field :location, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Price (in €):</label>
+        <%= f.text_field :price, class: 'form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <button type="submit" class='btn btn-success'>Save the event</button>
+      </div>
     <% end %>
-    </p>
   </div>
 </div>

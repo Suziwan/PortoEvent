@@ -3,8 +3,8 @@
   <h4>List of all events</h4><br>
   <div class="list-group">
     <% @events.each do |event| %>
-      <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
-        Event nº <%= event.id %>: <%= event.title %><br>
+      <a href="/events/<%= event.id %>/" class="list-group-item list-group-item-action">
+        <%= event.title %><br>
       </a>
     <% end %>
   </div>
