@@ -11,23 +11,11 @@
 </div>
 <div class="container-fluid">
   <br>
-  <ul>
-    <% if user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %><br>
-        Voici ton email : <%= current_user.email %><br>
-        <%= link_to "Secret page", static_pages_secret_path %><br>
-        <%= link_to "Edit email / password", edit_user_registration_path %><br>
-    <% else %>   
-        <%= link_to "Sign in", new_user_session_path %><br>
-        <%= link_to "Sign up", new_user_registration_path %><br>
-    <% end %>
-  </ul>
-  <br>
-  <h4>Coming up: </h4><br>
+  <h3>Events coming up: </h3><br>
   <div class="list-group">
     <% @events.each do |event| %>
-      <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
-        <%= event.title %><br>
+      <a href="/events/<%= event.id %>/" class="list-group-item list-group-item-action">
+        <h5><%= event.title %></h5>
         <strong>Date: </strong><%= event.start_date.strftime('%A, %B %dth %Y') %><br>
         <strong>Price: </strong><%= event.price %> €<br>
       </a>
