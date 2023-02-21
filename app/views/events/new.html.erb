@@ -1,11 +1,13 @@
 <div class="container-fluid">
   <br>
-  <h4>List of all events</h4><br>
+  <h4>Create a new event </h4><br>
   <div class="list-group">
+  <p>For now, here is the list:<br><br>
     <% @events.each do |event| %>
       <a href="/users/<%= event.id %>/" class="list-group-item list-group-item-action">
         Event nº <%= event.id %>: <%= event.title %><br>
       </a>
     <% end %>
+    </p>
   </div>
 </div>
