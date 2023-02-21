@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "home#index"
+  
+  root "static_pages#index"
+  get 'static_pages/index'
+  get 'static_pages/secret'
 
-  resources :users, :only => [:index, :show]
+  resources :users
 
   resources :events, :only => [:index, :show]
   

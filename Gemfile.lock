@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/heartcombo/devise.git
+  revision: 41e2db212065f2a75a5d73e76d6eb8ecd53a6acf
+  branch: main
+  specs:
+    devise (4.9.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,12 +102,6 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-    devise (4.9.0)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
-      responders
-      warden (~> 1.2.3)
     dockerfile-rails (1.1.2)
       rails
     dotenv (2.8.1)
@@ -235,7 +241,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
-  devise
+  devise!
   dockerfile-rails (>= 1.1)
   dotenv-rails
   faker
