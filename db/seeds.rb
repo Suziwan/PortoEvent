@@ -14,7 +14,7 @@ Event.destroy_all
 
 5.times do
   User.create!(email: Faker::Internet.email(domain: 'yopmail.com'),
-              encrypted_password: Faker::Internet.password(min_length: 6, max_length: 10),
+              password: Faker::Internet.password(min_length: 6, max_length: 10),
               description: Faker::Lorem.paragraph,
               first_name: Faker::Name.first_name, 
               last_name: Faker::Name.last_name)
