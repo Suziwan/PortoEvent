@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <br>
+  <h4>Profile of <%= @user.first_name %> <%= @user.last_name %></h4><br>
+    <div class="my-box">
+      <p><strong>First name: </strong><%= @user.first_name %><br>
+      <strong>Last name: </strong><%= @user.last_name %><br>
+      <br>
+      <strong>Email: </strong><%= @user.email %><br>
+      <br>
+      <strong>Description: </strong><%= @user.description %>
+    </div>
+    <br>
+    <a class="btn btn-primary btn-lg" href="/users/<%= params[:id] %>/edit" role="button">Edit</a>
+    <br><br>
+    <a href="/users/">Back to all users</a>
+  </p>
+</div>

@@ -2,12 +2,13 @@
   <br>
   <h4><%= @event.title %></h4><br>
   <div class="my-box">
-    <p><strong>Date: </strong><%= @event.start_date %><br><br>
+    <p><strong>Date: </strong><%= @event.start_date %><br>
       <strong>Duration: </strong><%= @event.duration %> minutes<br><br>
       <strong>Title: </strong><%= @event.title %><br>
       <strong>Description: </strong><%= @event.description %><br><br>
       <strong>Price: </strong><%= @event.price %> €<br>
       <strong>Location: </strong><%= @event.location %><br><br>
+      <strong>Participants: </strong>0<br><br>
       <a class="btn btn-primary btn-lg" href="/events/<%= params[:id] %>/edit" role="button">Edit this event</a>
     </p>
   </div>

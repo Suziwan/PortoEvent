@@ -32,8 +32,8 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    post_params = params.require(:event).permit(:title, :description, :start_date, :duration, :location, :price)
-    @event.update(post_params)
+    event_params = params.require(:event).permit(:title, :description, :start_date, :duration, :location, :price)
+    @event.update(event_params)
     redirect_to root_path
   end
 
