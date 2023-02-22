@@ -6,7 +6,6 @@ ruby "3.0.0"
 gem "faker"
 gem "dotenv-rails"
 gem "devise", github: "heartcombo/devise", branch: "main"
-gem "mailcatcher"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
@@ -78,5 +77,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "dockerfile-rails", ">= 1.1", :group => :development

@@ -3,7 +3,6 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-
   # Ensure you have defined default url options in your environments files. Here
   # is an example of default_url_options appropriate for a development environment
   # in config/environments/development.rb:
