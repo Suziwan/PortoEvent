@@ -16,8 +16,8 @@
     <% @events.each do |event| %>
       <a href="/events/<%= event.id %>/" class="list-group-item list-group-item-action">
         <h5><%= event.title %></h5>
-        <strong>Date: </strong><%= event.start_date.strftime('%A, %B %dth %Y') %><br>
-        <strong>Price: </strong><%= event.price %> €<br>
+        <i class="fa-solid fa-calendar-days"></i><strong>Date: </strong><%= event.start_date.strftime('%A, %B %dth %Y') %><br>
+        <i class="fa-solid fa-tag"></i><strong>Price: </strong><%= event.price %> €<br>
       </a>
     <% end %>
   </div>

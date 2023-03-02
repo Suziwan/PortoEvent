@@ -8,6 +8,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <script src="https://kit.fontawesome.com/1fc3880b90.js" crossorigin="anonymous"></script>
   </head>
 
 <style>
@@ -44,34 +46,16 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.fa-solid {
+  padding: 10px;
+}
 </style>
 
   <body>
-  <nav class="navbar navbar-expand navbar-dark bg-dark justify-content-between">
-    <a class="navbar-brand" href="/">PortoEvent</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/events/new">Create an event</a>
-        </li>
-      </ul>
-    </div>
-    <form class="form-inline text-light">
-      <% if user_signed_in? %>
-        <a class="btn btn-light" href="<%= static_pages_secret_path %>" role="button">Profile</a>
-        <a class="btn btn-light" href="<%= destroy_user_session_path %>" role="button">Log out</a>
-      <% else %>
-        <a class="btn btn-light" href="<%= new_user_session_path %>" role="button">Login</a>
-        <a class="btn btn-light" href="<%= new_user_registration_path %>" role="button">Create account</a>
-      <% end %>
-    </form>
-  </nav>
+    <%= render 'layouts/navbar'%>
+    <%= render 'layouts/flash'%>
     <%= yield %>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
